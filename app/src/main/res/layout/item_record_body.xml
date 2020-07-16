@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F7F7"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/lineImageView_Record"
+        android:layout_width="10dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_rectangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/title_Record"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/lineImageView_Record"
+        android:text="공부"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/lineImageView_Record"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/context_Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_Record"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/lineImageView_Record"
+        android:text="세부내용"
+        android:textSize="15dp"
+        android:ems="10"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toRightOf="@id/lineImageView_Record"
+        app:layout_constraintTop_toBottomOf="@id/title_Record" />
+
+    <TextView
+        android:id="@+id/satisfaction_Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/title_Record"
+        android:text="(5)"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/title_Record"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeMeasured_Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="00:30"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeUpTo_Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeMeasured_Record"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:text="11:45-12:15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeMeasured_Record" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

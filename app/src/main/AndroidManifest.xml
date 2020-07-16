@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.visibletime">
+    <!-- E_Mail 인증을 위함 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 화면이 꺼진 상태에서 깨우기 위한 권한 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 부팅시 서비스를 실행함 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 포어그라운드 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 이미지 사용 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Ui.EditPasswordActivity"></activity>
+        <activity android:name=".Ui.CreateRoutineActivity" />
+        <activity android:name=".Ui.StatisticsActivity" />
+        <activity android:name=".Ui.PickReportActivity" />
+
+        <service
+            android:name=".Service.MeasureTimeService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Ui.TutorialActivity" />
+        <activity android:name=".Ui.CreateAlarmActivity" />
+        <activity android:name=".Ui.SettingAlarmActivity" />
+        <activity android:name=".Ui.CertifyEmailActivity" />
+        <activity android:name=".Ui.RegisterActivity" />
+        <activity android:name=".Ui.RoutineActivity" />
+        <activity android:name=".Ui.CategoryActivity" />
+        <activity android:name=".Ui.EditRoutineActivity" />
+        <activity android:name=".Ui.WriteDiaryActivity" />
+        <activity android:name=".Ui.MeasureTimeActivity" /> <!-- <activity android:name=".Ui.LoginActivity"> -->
+        <activity
+            android:name=".Ui.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".Ui.EditReportActivity" />
+        <activity android:name=".Ui.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 재부팅후에도 알림이 동작하도록 함 -->
+        <receiver
+            android:name=".Receiver.DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver> <!-- 알람 시간에 사용자에게 알림을을 헤드업 알림 또는 상태에 아이콘으로 보여주도록 한다. -->
+        <receiver android:name=".Receiver.AlarmReceiver" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.visibletime"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

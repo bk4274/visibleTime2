@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ui.CertifyEmailActivity">
+
+    <TextView
+        android:id="@+id/activityNameTextView_CertifyEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="이메일 인증하기"
+        android:textSize="24sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="180dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/activityNameTextView_CertifyEmail"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/gradient"/>
+
+    <EditText
+        android:id="@+id/certifyTextEditText_CertifyEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/activityNameTextView_CertifyEmail"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:hint="이메일로 발송된 인증 번호를 적어주세요" />
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/satisfaction_MeasureTime"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_below="@id/activityNameTextView_CertifyEmail"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="3:00" />-->
+
+
+
+    <Button
+        android:id="@+id/enterBtn_CertifyEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="확인"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        android:textSize="20dp"
+        />
+
+</RelativeLayout>

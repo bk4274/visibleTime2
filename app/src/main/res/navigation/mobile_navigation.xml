@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.visibletime.Ui.Fragement.HomeFragment"
+        android:label="메인 화면"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_record"
+        android:name="com.example.visibletime.Ui.Fragement.RecordFragment"
+        android:label="기록 리스트"
+        tools:layout="@layout/fragment_record" />
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="com.example.visibletime.Ui.Fragement.DiaryFragment"
+        android:label="일일평가"
+        tools:layout="@layout/fragment_diary" />
+
+    <activity
+        android:id="@+id/nav_statistics"
+        android:name="com.example.visibletime.Ui.StatisticsActivity"
+        android:label="통계"
+        tools:layout="@layout/activity_statistics" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.visibletime.Ui.Fragement.SettingFragment"
+        android:label="설정"
+        tools:layout="@layout/fragment_setting" />
+
+    <activity
+        android:id="@+id/nav_routine"
+        android:name="com.example.visibletime.Ui.RoutineActivity"
+        android:label="루틴"
+        tools:layout="@layout/activity_routin" />
+
+    <activity
+        android:id="@+id/nav_category"
+        android:name="com.example.visibletime.Ui.CategoryActivity"
+        android:label="활동"
+        tools:layout="@layout/activity_category" />
+<!--    <activity-->
+<!--        android:id="@+id/nav_diary"-->
+<!--        android:name="com.example.visibletime.Ui.WriteDiaryActivity"-->
+<!--        android:label="다이어리"-->
+<!--        tools:layout="@layout/activity_write_diary" />-->
+
+
+</navigation>

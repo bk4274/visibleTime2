@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ui.WriteDiaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text=" 하루반성 일기 작성"
+            android:textColor="@color/colorWhite"
+
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/deleteBtn_Write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_delete_white_35dp"/>
+
+        <ImageView
+            android:id="@+id/cameraImageView_Write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_camera"/>
+
+        <ImageButton
+            android:id="@+id/enterBtn_Write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:src="@drawable/ic_check_black_24dp"
+            android:layout_marginEnd="10dp"
+            android:text="완료" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/addGoodBtn_Write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:drawableRight="@drawable/ic_add_circle_outline_black_24dp"
+                android:gravity="left|center_vertical"
+                android:text="잘한 행동 리스트"
+                android:textColor="@color/colorGray"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/lineGood_WritingDiary"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/colorGray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goodRecyclerView_WritingDiary"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <Button
+                android:id="@+id/addBadBtn_Write"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorTransparent"
+                android:drawableRight="@drawable/ic_add_circle_outline_black_24dp"
+                android:gravity="left|center_vertical"
+                android:text="아쉬운 행동 리스트"
+                android:textColor="@color/colorGray"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/lineBad_WritingDiary"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/colorGray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/badRecyclerView_WritingDiary"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_gray">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="하루 3문장 일기"
+                    android:textSize="20dp" />
+
+                <View
+                    android:id="@+id/lineDiary_WritingDiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_happy"/>
+                    <EditText
+                        android:id="@+id/goodTextView_Write"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:hint="잘한 점"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_angry"/>
+                    <EditText
+                        android:id="@+id/badTextView_Write"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:hint="아쉬운 점"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_will"/>
+                    <EditText
+                        android:id="@+id/willTextView_Write"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textStyle="bold"
+                        android:hint="앞으로 다짐" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/pictureImageView_Write"
+                android:background="@drawable/shape_gray"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_foreground" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

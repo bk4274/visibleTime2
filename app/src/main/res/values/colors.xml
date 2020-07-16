@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#2C3974</color>
+    <color name="colorAccent">#673AB7</color>
+    <color name="colorTransparent">#00ff0000</color>
+    <color name="colorGray">#7E7D7D</color>
+    <color name="colorLightGray">#CCC9C9</color>
+    <color name="colorMeasure">#71BBFC</color>
+
+    <!-- floating actions buttons -->
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#3855F3</color>
+    <color name="colorRed">#F54279</color>
+</resources>

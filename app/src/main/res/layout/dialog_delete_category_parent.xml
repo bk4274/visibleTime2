@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="삭제 확인"
+        android:gravity="center"
+        android:textSize="24dp"/>
+
+
+    <TextView
+        android:id="@+id/infoTextView_CategoryParentDelete"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="삭제 내용" />
+
+    <CheckBox
+        android:id="@+id/checkbox_CategoryParentDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="하위 카테고리도 함께 삭제"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/cancelBtn_CategoryParentDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTransparent"
+            android:drawableLeft="@drawable/ic_delete"
+            android:layout_marginEnd="20dp"
+            android:text="취소" />
+
+        <Button
+            android:id="@+id/enterBtn_CategoryParentDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_ok"
+            android:background="@color/colorTransparent"
+            android:text="확인" />
+
+    </LinearLayout>
+
+</LinearLayout>

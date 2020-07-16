@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--해당 뷰는 Floating 버튼이 들어가는 CategoryActivity.xml 파일에서 include됨-->
+    <View
+        android:id="@+id/floating_menu_background"
+        android:visibility="gone"
+        android:background="#55000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/multiple_actions_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:layout_anchorGravity="center_vertical|right"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="@color/colorGray"
+        app:fab_addButtonPlusIconColor="@color/colorWhite"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_expandDirection="up"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addCategoryParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_add"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_title="상위 행동 추가하기"
+            app:fab_colorPressed="@color/colorGray" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addCategoryChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_add"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_title="하위 행동 추가하기"
+            app:fab_colorPressed="@color/colorGray" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>

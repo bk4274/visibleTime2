@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="메인">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_home"
+                    android:title="홈" />
+                <item
+                    android:id="@+id/nav_category"
+                    android:icon="@drawable/ic_category"
+                    android:title="활동 목록" />
+                <item
+                    android:id="@+id/nav_routine"
+                    android:icon="@drawable/ic_circulargraph"
+                    android:title="루틴" />
+<!--                <item-->
+<!--                    android:id="@+id/nav_diary"-->
+<!--                    android:icon="@drawable/ic_circulargraph"-->
+<!--                    android:title="하루일기 작성" />-->
+            </menu>
+
+        </item>
+
+        <item android:title="평가">
+            <menu>
+                <item
+                    android:id="@+id/nav_record"
+                    android:icon="@drawable/ic_record"
+                    android:title="기록" />
+                <item
+                    android:id="@+id/nav_calendar"
+                    android:icon="@drawable/ic_calendar"
+                    android:title="일일평가" />
+                <item
+                    android:id="@+id/nav_statistics"
+                    android:icon="@drawable/ic_statistics"
+                    android:title="통계" />
+                <item
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/ic_settings"
+                    android:title="설정" />
+            </menu>
+
+        </item>
+
+
+    </group>
+</menu>

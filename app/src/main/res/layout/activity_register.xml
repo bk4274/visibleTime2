@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.RegisterActivity">
+
+
+    <TextView
+        android:id="@+id/activityNameTextView_Register"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:text="  회원가입 "
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/eMailTextView_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activityNameTextView_Register"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="이메일" />
+    <EditText
+        android:id="@+id/eMailEditText_Register"
+        android:layout_width="265dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:layout_below="@id/eMailTextView_Register"
+        android:hint="이메일 입력(Nova@naver.com)"
+        android:inputType="textEmailAddress"/>
+
+    <Button
+        android:id="@+id/checkIDBtn_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:text="이메일 인증"
+        android:layout_toRightOf="@id/eMailEditText_Register"
+        android:layout_alignBaseline="@id/eMailEditText_Register"/>
+
+    <TextView
+        android:id="@+id/ableIDTextView_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="70dp"
+        android:text="이메일 인증 성공"
+        android:textColor="#1350EE"
+        android:layout_below="@id/eMailEditText_Register"/>
+    <TextView
+        android:id="@+id/overlapIDTextView_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="70dp"
+        android:text="중복된 ID 입니다."
+        android:textColor="#E91E63"
+        android:layout_below="@id/eMailEditText_Register"/>
+    <TextView
+        android:id="@+id/unAbleIDTextView_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="50dp"
+        android:text="올바른 이메일 형식이 아닙니다."
+        android:textColor="#E91E63"
+        android:layout_below="@id/eMailEditText_Register"/>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/Unable_ID_TextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginStart="60dp"-->
+<!--        android:text="중복된 이메일입니다."-->
+<!--        android:textColor="#E91E63"-->
+<!--        android:layout_below="@id/eMailEditText_Register"/>-->
+
+    <TextView
+        android:id="@+id/passwordTextView_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="10dp"
+        android:text="비밀번호"
+        android:layout_below="@id/eMailEditText_Register"/>
+
+    <EditText
+        android:id="@+id/passwordEditText_Register"
+        android:layout_width="274dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="비밀번호 입력(6~16자리)"
+        android:inputType="textPassword"
+        android:layout_below="@id/passwordTextView_Register"
+        android:maxLength="16" />
+
+    <EditText
+        android:id="@+id/passwordCheckEditText_Register"
+        android:layout_width="273dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="비밀번호 확인"
+        android:layout_below="@id/passwordEditText_Register"
+        android:inputType="textPassword"
+        android:maxLength="16" />
+
+
+
+    <ImageView
+        android:id="@+id/checkPasswordImgView_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/passwordEditText_Register"
+        android:layout_toRightOf="@id/passwordCheckEditText_Register"
+        android:background="#00ff0000" />
+
+
+
+    <Button
+        android:id="@+id/enterBtn_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="회원가입 완료"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
